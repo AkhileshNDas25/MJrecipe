@@ -1,122 +1,81 @@
-# CulinaryHub
+# MJrecipe
 
-A modern, responsive web application for sharing and discovering recipes, cooking tips, and connecting with a community of food enthusiasts.
+## About the Project
+
+MJrecipe is a modern web application for discovering, searching, and exploring recipes from around the world. Built with a focus on user experience, it offers an intuitive interface for food enthusiasts to find recipes based on cuisine, dietary preferences, and ingredients.
 
 ## Features
 
-- Recipe search and filtering
-- Cooking tips and techniques
-- Community recipe sharing
-- Dark mode support
-- Responsive design for all devices
+- Recipe search with filters for cuisine and dietary preferences
+- Detailed recipe information including instructions, ingredients, and nutritional data
+- Responsive design that works on desktop and mobile devices
+- Dark mode support for comfortable viewing in all lighting conditions
+- Community sharing features for recipe discussions
 
-## Getting Started
+## Technologies Used
 
-### Prerequisites
+- **Frontend Framework**: React 18
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Styling**: TailwindCSS
+- **Routing**: React Router DOM
+- **Data Fetching**: TanStack Query (React Query)
+- **Icons**: Lucide React
 
-- Node.js 14.x or higher
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- Node.js (v16 or higher)
 - npm or yarn
 
-### Installation
+## Setup Instructions
 
-1. Clone the repository
-```
-git clone https://github.com/yourusername/culinaryhub.git
-cd culinaryhub
-```
+1. Clone the repository:
+   ```
+   git clone https://github.com/AkhileshNDas25/MJrecipe.git
+   cd MJrecipe
+   ```
 
-2. Install dependencies
-```
-npm install
-# or
-yarn
-```
+2. Install dependencies:
+   ```
+   npm install
+   ```
 
-3. Setup environment variables
-```
-cp .env.example .env
-```
-Edit the `.env` file and add your Spoonacular API key. You can get one by signing up at [Spoonacular Food API](https://spoonacular.com/food-api).
+3. Create a `.env` file in the root directory with your Spoonacular API key:
+   ```
+   VITE_SPOONACULAR_API_KEY=your_api_key_here
+   ```
+   - Get a free API key from [Spoonacular API](https://spoonacular.com/food-api)
 
-4. Start the development server
-```
-npm run dev
-# or
-yarn dev
-```
+4. Start the development server:
+   ```
+   npm run dev
+   ```
 
-5. Open [http://localhost:5173](http://localhost:5173) in your browser
+5. Open your browser and navigate to `http://localhost:5173` (or the port shown in your terminal)
 
-## Security Notice
+## Available Scripts
 
-**Important**: If you've previously used the Spoonacular API key that was accidentally committed to this repository, please regenerate your API key immediately as it has been exposed.
+- `npm run dev` - Starts the development server
+- `npm run build` - Builds the app for production
+- `npm run preview` - Previews the production build locally
+- `npm run lint` - Runs the linter to check for code issues
 
-## Built With
+## API Information
 
-- [React](https://reactjs.org/) - Frontend library
-- [TypeScript](https://www.typescriptlang.org/) - Type safety
-- [Vite](https://vitejs.dev/) - Build tool and development server
-- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
-- [Lucide React](https://lucide.dev/) - Icons
-- [React Router](https://reactrouter.com/) - Routing
-- [React Query](https://tanstack.com/query) - Data fetching and caching
-- [Spoonacular API](https://spoonacular.com/food-api) - Recipe data
+This project uses the [Spoonacular API](https://spoonacular.com/food-api) for recipe data. The API provides:
+
+- Access to over 5,000 recipes
+- Detailed ingredient information
+- Nutritional analysis
+- Recipe instructions and cooking times
+
+Note: The free tier of Spoonacular API has usage limits. Check their documentation for current quotas.
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## License
 
-This project is licensed under the MIT License
-
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+This project is licensed under the MIT License - see the LICENSE file for details.
